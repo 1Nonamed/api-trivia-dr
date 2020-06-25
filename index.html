@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game DR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="display-4 font-weight-bold text-uppercase text-center text-dark shadow p-3 mb-5 bg-white rounded">Trivia Game</h1>
+    <div class="container mt-5">
+        <div class="form-group">
+            <label for="select-categories">Select Category;</label>
+            <select onchange="selectCategoryType()" class="form-control" id="select-categories">
+                <!-- Aquí van las opciones generadas con javascript -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="select-type">Select Type:</label>
+            <select onchange="selectCategoryType()" class="form-control" id="select-type">
+            <!-- Aquí van los tipos de preguntas -->
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary btn-block text-uppercase font-weight-bold" onclick="getQuestions()">Let's Go</button>
+    </div>
+    <div class="container">
+        <form action="">
+            <div class="mt-5" >
+                <div class="row justify-content-md-center" id="questions">
+                    <!-- Aquí van las preguntas generadas -->
+                </div>
+            </div>
+            <div class="mb-5" > 
+                <button type="submit" class="btn btn-success btn-block text-uppercase font-weight-bold shadow-lg" onsubmit="getResults(getSelectedAnswer)">Your Results</button>
+                    <!-- Resultados -->
+            </div>
+        </form>
+    </div>
+    
+    <script src="./scripts.js"></script>
+</body>
+</html>
